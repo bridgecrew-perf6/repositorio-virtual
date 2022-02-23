@@ -12,7 +12,7 @@ $nombre = $_SESSION['nombre'];
         <div class="carousel carousel-slider" data-indicators="true">
             <div class="carousel-fixed-item">
                 <div class="container">
-                    <h1 class="white-text">Bienvenido
+                    <h1 class="white-text">Bienvenido AUTOR
                         <?php echo $nombre?>
                     </h1>
 

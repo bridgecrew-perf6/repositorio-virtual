@@ -9,27 +9,25 @@
 $email=$_POST['email'];
 $contrasenia=$_POST['contrasenia'];
     require_once "conexion/conexion.php";
-    //include "../public/login.php";
-    /* Si se descomenta esta linea abra un error en pantalla sobre inicio de sesión*/
     $conexion = new Conexion;
 
-    $consulta="SELECT*FROM login where correo='$email' and contrasenia='$contrasenia'";
+    $consulta="SELECT * FROM `usuarios` WHERE correo='$email' and contrasena='$contrasenia'";
         if ($sql = $conexion->obtenerDatos($consulta)) {
            session_start();
            
             $_SESSION['loggedUserName'] = $sql[0]['correo'] ;
             $_SESSION['id_rol'] = $sql[0]['id_rol'];
-            if ($sql[0]['id_rol']==1) {
-                $consultaid ="SELECT * FROM medicos where correo='$email'";
+            if ($sql[0]['id_rol']==2) {
+               /* $consultaid ="SELECT * FROM usuarios where correo='$email'";
                 $sqlid = $conexion->obtenerDatos($consultaid);
-                $_SESSION['id_medico']=$sqlid[0]['id_medico'];
-                $_SESSION['nombre']=$sqlid[0]['nombre'];
+                $_SESSION['id_user']=$sqlid[0]['id_user'];
+                $_SESSION['nombre']=$sqlid[0]['nombre'];*/
                 echo '<script>alert("Inicio de sesion exitoso");window.location.href="../index.php?menu=medico"</script>';
-            } elseif ($sql[0]['id_rol']==2) {
-                $consultaid = "SELECT * FROM pacientes where correo='$email'";
+            } elseif ($sql[0]['id_rol']==3) {
+               /* $consultaid = "SELECT * FROM usuarios where correo='$email'";
                 $sqlid = $conexion->obtenerDatos($consultaid);
-                $_SESSION['id_paciente'] = $sqlid[0]['id_paciente'];
-                $_SESSION['nombre'] = $sqlid[0]['nombre'];
+                $_SESSION['id_user'] = $sqlid[0]['id_user'];
+                $_SESSION['nombre'] = $sqlid[0]['nombre'];*/
                 echo '<script>alert("Inicio de sesion exitoso");window.location.href="../index.php?menu=paciente"</script>';
             }
         } else {

@@ -15,12 +15,10 @@
     $apellidoMaterno=$_POST['apellidoMaterno'];
     $fechaNacimiento=$_POST['fechaNacimiento'];
     $genero=$_POST['genero'];
-    $numTelefono=$_POST['numTelefono'];
-    $estatura=$_POST['estatura'];
-    $peso=$_POST['peso'];    
-    $idrol = "2";
+    $rol=$_POST['rol'];    
+
    
-    $sql = "SELECT correo FROM `login` WHERE correo = '$correo' ";
+    $sql = "SELECT correo FROM `usuarios` WHERE correo = '$correo' ";
     $resultado1 = $conexion->obtenerDatos($sql);
     if($resultado1[0]['correo']== $correo){ 
        
@@ -40,14 +38,13 @@
          
     }else{
                
-        $sql2 ="INSERT INTO `pacientes`(`nombre`, `apellido_p`,`apellido_m`, `fecha_nacimiento`, `genero`, `no_telefono`,`estatura`,`peso`,`correo`) "
-        . "VALUES ('$nombre','$apellidoPaterno','$apellidoMaterno','$fechaNacimiento','$genero','$numTelefono','$estatura','$peso','$correo')";
+        $sql2 = "INSERT INTO `usuarios` (`id_user`, `nombre`, `apellidoP`, `apellidoM`, `correo`, `fechaNac`, `sexo`, `contrasena`, `id_rol`) VALUES (NULL, '$nombre', '$apellidoPaterno', '$apellidoMaterno', '$correo', '$fechaNacimiento', '$genero', '$contrasenia', '$rol')"; 
         $resultado2 = $conexion->ingresarDatos($sql2);     
        
-        
-        $sql3 = "INSERT INTO `login`(`correo`,`contrasenia`,`id_rol`) VALUES ('$correo','$contrasenia','$idrol')";
-        $resultado3 = $conexion->ingresarDatos($sql3);
-            /* echo '<script>alert("Registro exitoso");window.location.href="../index.php?menu=login"</script>'; */
+        if($rol == "3" ){
+            $sql3 = "INSERT INTO `autor`(`nombre`,`apellidoP`,`apellidoM`) VALUES ('$nombre','$apellidoPaterno','$apellidoMaterno')";
+            $resultado3 = $conexion->ingresarDatos($sql3);
+        }              
             echo '<script>
             Swal.fire({
             icon: "success",

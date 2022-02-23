@@ -49,33 +49,32 @@
                     <label class="gender" for="with-gap">Sexo:</label>
                     <label>
 
-                        <input class="with-gap" name="genero" type="radio" value="Fem" checked />
+                        <input class="with-gap" name="genero" type="radio" value="Femenino" checked />
                         <span>F</span>
                     </label>
                     <label>
 
-                        <input class="with-gap" name="genero" type="radio" value="Masc" />
+                        <input class="with-gap" name="genero" type="radio" value="Masculino" />
                         <span>M</span>
                     </label>
                 </p>
             </div>
-            <div class="input-field col s4">
-                <i class="material-icons prefix">phone</i>
-                <input id="icon_telephone" type="tel" name="numTelefono" minlength="10" maxlength="10" onkeypress="return soloNum(event)" class="validate" onkeyup="javascript:validarSiNumero(event)" required>
-                <label for="icon_telephone">Número de teléfono</label>
+            <div class="input-field col s6">
+                <p>
+                    <label class="gender" for="with-gap">Registrar como:</label>
+                    <label>
+
+                        <input class="with-gap" name="rol" type="radio" value="2" checked />
+                        <span>Lector</span>
+                    </label>
+                    <label>
+
+                        <input class="with-gap" name="rol" type="radio" value="3" />
+                        <span>Autor</span>
+                    </label>
+                </p>
             </div>
 
-            <div class="input-field col s4">
-                <i class="material-icons prefix">height</i>
-                <input id="icon_height" type="number" name="estatura" min="50" max="270"  onkeypress="return soloNum(event)" class="validate" placeholder="cm">
-                <span class="helper-text" data-error="No parece ser un valor aceptable" data-success="">Helper text</span>
-                <label for="icon_height">Estatura</label>
-            </div>
-            <div class="input-field col s4">
-                <i class="material-icons prefix">monitor_weight</i>
-                <input id="icon_weight" type="text" name="peso" minlength="2" maxlength="3" onkeypress="return soloNum(event)" class="validate" placeholder="kg">
-                <label for="icon_weight">Peso</label>
-            </div>
             <div class="input-field col s12 ">
                 <button class="btn-register | btn waves-effect waves-light" type="submit" name="action">Registrarse
                     <i class="material-icons right">send</i>
