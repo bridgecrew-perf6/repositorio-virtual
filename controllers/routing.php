@@ -27,21 +27,6 @@ switch ($var_getMenu) {
     case "medico":
         require_once('./public/medico.php');
         break;
-    case "historialCitas":
-        require_once('./public/historialcitas.php');
-        break;
-    case "horariosm":
-        require_once('./public/views/FormHorarios.php');
-        break;
-    case "agendarc":
-        require_once('./public/views/AgendarCita.php');
-        break;
-    case "receta":
-        require_once('./public/FormRecetas.php');
-        break;
-    case "recetaMedica":
-        require_once('./public/FormRecetasP2.php');
-        break;
     case "pdf":
         require_once('./public/envioPdf.php');
         break;        
