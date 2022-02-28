@@ -25,7 +25,7 @@
         </div>
         <div class="footer-copyright | orange darken-4">
             <div class="container">
-                © 2021 Copyright We Are OK
+                © 2022 Copyright We Are OK
                 <a class="grey-text text-lighten-4 right" href="https://github.com/reyHd00/repositorio-virtual.git">OK</a>
             </div>
         </div>

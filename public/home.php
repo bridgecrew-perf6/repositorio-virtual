@@ -20,25 +20,25 @@
                 <div class="carousel-item slime-item01   black-text" href="#one!">
                     <div class="container">
                         <h2>La Novia Sustituta </h2>
-                        <p class="black-text">LUCÍA DE AVILA.</p>
+                        <p class="black-text">LUCÍA DE AVILA</p>
                     </div>
                 </div>
                 <div class="carousel-item  slime-item02 black-text" href="#two!">
                     <div class="container">
-                        <h2>¡Protégete y apoya a los demás!</h2>
-                        <p class="black-text">Estemos unidos</p>
+                        <h2>Titulo 00</h2>
+                        <p class="black-text">autor</p>
                     </div>
                 </div>
                 <div class="carousel-item  slime-item03 black-text" href="#three!">
                     <div class="container">
-                        <h2>#Yo me quedo en casa</h2>
-                        <p class="black-text">Cuida a tu familia.</p>
+                        <h2>Titulo 00</h2>
+                        <p class="black-text">autor</p>
                     </div>
                 </div>
                 <div class="carousel-item  slime-item04  white-text" href="#four!">
                     <div class="container">
-                        <h2>¡Agenda tu cita desde aquí!</h2>
-                        <p class="black-text">Evita convivir con mucha gente</p>
+                        <h2>Titulo 00</h2>
+                        <p class="black-text">autor</p>
                     </div>
                 </div>
             </div>

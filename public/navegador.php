@@ -10,7 +10,7 @@
     if (isset($_SESSION['loggedUserName'])) {
         if ($_SESSION['id_rol'] == 1) {
             ?>
-<!-- Navegador logeado Medico -->
+<!-- Navegador logeado Author -->
 <div class="navbar-fixed">
     <!-- Dropdown Structure -->
     <ul id="dropdown1" class="dropdown-content">
@@ -26,21 +26,21 @@
             <li><a href="sass.html"><i class="material-icons right">search</i>Buscar</a></li>
             <li><a class="dropdown-trigger" href="#!" data-target="dropdown1">Genero<i
                         class="material-icons right">arrow_drop_down</i></a></li>
-                <li><a href="?menu=horariosm">Horarios</a></li>
-                <li><a href="?menu=receta">Crear receta</a></li>
-                <li><a href="">Pacientes</a></li>
+                <li><a href="?menu=horariosm">Mis historias</a></li>
+                <!-- <li><a href="?menu=receta">Crear receta</a></li> -->
+                <li><a href="">Subir</a></li>
                 <li><a href="?menu=logout"><i class="material-icons left">logout</i>Cerrar sesión</a></li>
             </ul>
         </div>
         <ul class="sidenav" id="mobile-demo">
             <li><a href="?menu=logout"><i class="material-icons left">logout</i>Cerrar sesión Medico</a></li>
-        </ul>
+        </ul> 
     </nav>
 </div>
 <?php
 } else {
             ?>
-<!-- Navegador logeado Paciente -->
+<!-- Navegador logeado Lector -->
 <div class="navbar-fixed">
     <!-- Dropdown Structure -->
     <ul id="dropdown1" class="dropdown-content">
@@ -56,9 +56,9 @@
             <li><a href="sass.html"><i class="material-icons right">search</i>Buscar</a></li>
             <li><a class="dropdown-trigger" href="#!" data-target="dropdown1">Genero<i
                     class="material-icons right">arrow_drop_down</i></a></li>
-                <li><a href="?menu=agendarc">Agendar cita</a></li>
-                <li><a href="">Condiciones médicas</a></li>
-                <li><a href="?menu=historialCitas">Historial de citas</a></li>
+                <li><a href="?menu=agendarc">Mis historias</a></li>
+                <li><a href="">Autores</a></li>
+                <!-- <li><a href="?menu=historialCitas">Historial de citas</a></li> -->
                 <li><a href="?menu=logout"><i class="material-icons left">logout</i>Cerrar sesión</a></li>
             </ul>
         </div>
