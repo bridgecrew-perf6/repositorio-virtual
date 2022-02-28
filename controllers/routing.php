@@ -22,10 +22,10 @@ switch ($var_getMenu) {
             header("location: ./index.php?menu=home");
         break;
     case "paciente":
-        require_once('./public/paciente.php');
+        require_once('./public/autor.php');
         break;
     case "medico":
-        require_once('./public/medico.php');
+        require_once('./public/lector.php');
         break;
     case "pdf":
         require_once('./public/envioPdf.php');
