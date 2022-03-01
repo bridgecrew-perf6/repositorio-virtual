@@ -25,20 +25,20 @@
                 </div>
                 <div class="carousel-item  slime-item02 black-text" href="#two!">
                     <div class="container">
-                        <h2>Titulo 00</h2>
-                        <p class="black-text">autor</p>
+                        <h2>No tenemos un papá <br>   cualquiera </br></h2>
+                        <p class="black-text">ADRIANA VENTURA</p>
                     </div>
                 </div>
                 <div class="carousel-item  slime-item03 black-text" href="#three!">
                     <div class="container">
-                        <h2>Titulo 00</h2>
-                        <p class="black-text">autor</p>
+                        <h2>Esposa Olvidada</h2>
+                        <p class="black-text">PATRICIA MARADIAGA</p>
                     </div>
                 </div>
-                <div class="carousel-item  slime-item04  white-text" href="#four!">
+                <div class="carousel-item  slime-item04  black-text" href="#four!">
                     <div class="container">
-                        <h2>Titulo 00</h2>
-                        <p class="black-text">autor</p>
+                        <h2>Mi CEO Infantil <br>y Mandón </br></h2>
+                        <p class="black-text">TATIANA COREA</p>
                     </div>
                 </div>
             </div>
@@ -48,7 +48,44 @@
 
 
     </div>
-    <div class="col s4">1</div>
+    <div class="col s4">
+    <div class="row">
+    <div class="col s4"><img class="responsive-img" src="../mi_ceo.png"></div>
+    <div class="col s8 ">sarahi</div>
+    </div>
+    <div class="row">
+    <div class="col s4"><img class="responsive-img" src="../mi_ceo.png"></div>
+    <div class="col s8">sarahi</div>
+    </div>
+    <div class="row">
+    <div class="col s4"><img class="responsive-img" src="../mi_ceo.png"></div>
+    <div class="col s8">sarahi</div>
+    </div>
+    <div class="row">
+    <div class="col s4"><img class="responsive-img" src="../mi_ceo.png"></div>
+    <div class="col s8">sarahi</div>
+    </div>
+    <div class="row">
+    <div class="col s4"><img class="responsive-img" src="../mi_ceo.png"></div>
+    <div class="col s8">sarahi</div>
+    </div>
+    <div class="row">
+    <div class="col s4"><img class="responsive-img" src="../mi_ceo.png"></div>
+    <div class="col s8">sarahi</div>
+    </div>
+    <div class="row">
+    <div class="col s4"><img class="responsive-img" src="../mi_ceo.png"></div>
+    <div class="col s8">sarahi</div>
+    </div>
+    <div class="row">
+    <div class="col s4"><img class="responsive-img" src="../mi_ceo.png"></div>
+    <div class="col s8">sarahi</div>
+    </div>
+    <div class="row"><div class="col s4"><img class="responsive-img" src="../mi_ceo.png"></div>
+    <div class="col s8">sarahi</div></div>
+    <div class="row"><div class="col s4"><img class="responsive-img" src="../mi_ceo.png"></div>
+    <div class="col s8">sarahi</div></div>
+    </div>
 </div>
 <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.1/jquery.min.js"></script>
 <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.98.1/js/materialize.min.js"></script>
