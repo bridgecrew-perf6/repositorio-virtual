@@ -8,7 +8,7 @@ $var_getMenu = isset($_GET['menu']) ? $_GET['menu'] : 'inicio';
 // $var_getMenu = $_GET['menu'];
 
 switch ($var_getMenu) {
-    case "inicio":
+    case "home":
         require_once('./public/home.php');
         break;
     case "login":
