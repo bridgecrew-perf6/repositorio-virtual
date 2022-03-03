@@ -21,14 +21,14 @@ switch ($var_getMenu) {
             $session_destroy = session_destroy();
             header("location: ./index.php?menu=home");
         break;
-    case "paciente":
+    case "autor":
         require_once('./public/autor.php');
         break;
-    case "medico":
+    case "lector":
         require_once('./public/lector.php');
         break;
-    case "pdf":
-        require_once('./public/envioPdf.php');
+    case "lectorPdf":
+        require_once('./public/lectorPdf.php');
         break;        
     default:
         require_once('./public/home.php');
