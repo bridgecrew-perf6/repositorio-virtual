@@ -1,3 +1,9 @@
+<?php
+    require_once "./db/conexion/conexion.php";
+    $conexion = new Conexion;
+    $consulta = "SELECT `titulo`,`codigoArchivo`FROM `libro`;";
+    $sql = $conexion->obtenerDatos($consulta);
+?>
 <!-- Estilos en CSS -->
 <link rel="stylesheet" href="public/css/style_vtn_hm.css">
 
@@ -63,11 +69,11 @@
                 <div class="card horizontal ">
                     <div class="card-image">
                         <img class="responsive-img"
-                            src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSL7ZOxNnHJMVUtqr0RKddmzxIdw5hTt2rGCQ&usqp=CAU">
+                            src="./libros/portadas/<?php echo $sql[0]['codigoArchivo']; ?>.jpg">
                     </div>
                     <div class="card-stacked">
-                        <div class="card-action">
-                            <a class="blue-text " href="#">Novela</a>
+                        <div class="card-action" >
+                            <a class="blue-text " href="?menu=lectorPdf">Novela</a>
                         </div>
                         <div class="card-content">
                             <span class="new badge">4</span>Calificación</a>
