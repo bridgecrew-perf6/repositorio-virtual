@@ -20,7 +20,7 @@
         <li><a href="#!">Ensayos</a></li>
     </ul>
     <nav>
-        <div class="nav-wrapper | white">
+        <div class="nav-wrapper | nav-color">
             <a href="?menu=home" class="brand-logo grey-text text-darken-1">Inspired Authors</a>
             <ul id="nav-mobile" class="right hide-on-med-and-down">
             <li><a href="sass.html"><i class="material-icons right">search</i>Buscar</a></li>
@@ -50,7 +50,7 @@
         <li><a href="#!">Ensayos</a></li>
     </ul>
     <nav>
-        <div class="nav-wrapper | white">
+        <div class="nav-wrapper | nav-color">
             <a href="?menu=home" class="brand-logo grey-text text-darken-1">Inspired Authors</a>
             <ul id="nav-mobile" class="right hide-on-med-and-down">
             <li><a href="sass.html"><i class="material-icons right">search</i>Buscar</a></li>

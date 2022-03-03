@@ -1,13 +1,21 @@
 /* Fuentes */
 @import url('https://fonts.googleapis.com/css2?family=Roboto+Slab:wght@300;400;500&display=swap');
 
-div.row{
+div.content{
     margin-top: 1rem; 
     margin-bottom: 1rem;
+    margin-right: 0.8rem;
 }
-div.container{
+h5{
+  text-align: center;
+}
+div.row{
+    margin-bottom: 0;
+}
+
+/*div.container{
     margin-left: 3rem;
-}
+}*/
 div.slime-item01{
     
     background: url(../img/La_novia.png);
