@@ -22,13 +22,13 @@ $contrasenia=$_POST['contrasenia'];
                 $sqlid = $conexion->obtenerDatos($consultaid);
                 $_SESSION['id_user']=$sqlid[0]['id_user'];
                 $_SESSION['nombre']=$sqlid[0]['nombre'];*/
-                echo '<script>alert("Inicio de sesion exitoso");window.location.href="../index.php?menu=medico"</script>';
+                echo '<script>alert("Inicio de sesion exitoso");window.location.href="../index.php?menu=lector"</script>';
             } elseif ($sql[0]['id_rol']==3) {
                /* $consultaid = "SELECT * FROM usuarios where correo='$email'";
                 $sqlid = $conexion->obtenerDatos($consultaid);
                 $_SESSION['id_user'] = $sqlid[0]['id_user'];
                 $_SESSION['nombre'] = $sqlid[0]['nombre'];*/
-                echo '<script>alert("Inicio de sesion exitoso");window.location.href="../index.php?menu=paciente"</script>';
+                echo '<script>alert("Inicio de sesion exitoso");window.location.href="../index.php?menu=autor"</script>';
             }
         } else {
             echo '<script>
