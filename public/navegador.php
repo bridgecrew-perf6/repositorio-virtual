@@ -1,6 +1,11 @@
 <!-- Estilos en CSS -->
 <link rel="stylesheet" href="public/css/style_navegador.css">
-
+<link href="https://fonts.googleapis.com/css2?family=Pangolin&display=swap" rel="stylesheet">
+<style>
+    .brand-logo{
+        font-family: 'Pangolin', cursive;
+    }
+</style>
 <!-- Contenido -->
 <?php
     $estado_session = session_status();
@@ -21,7 +26,9 @@
     </ul>
     <nav>
         <div class="nav-wrapper | nav-color">
-            <a href="?menu=home" class="brand-logo grey-text text-darken-1">Inspired Authors</a>
+        <a href="#!" class="brand-logo"><i class="material-icons">auto_stories</i>Inspired Authors</a>
+        <a href="#" data-target="mobile-demo" class="sidenav-trigger"><i class="material-icons">menu</i></a>
+
             <ul id="nav-mobile" class="right hide-on-med-and-down">
             <li><a href="sass.html"><i class="material-icons right">search</i>Buscar</a></li>
             <li><a class="dropdown-trigger" href="#!" data-target="dropdown1">Genero<i
@@ -51,7 +58,9 @@
     </ul>
     <nav>
         <div class="nav-wrapper | nav-color">
-            <a href="?menu=home" class="brand-logo grey-text text-darken-1">Inspired Authors</a>
+        <a href="#!" class="brand-logo"><i class="material-icons">auto_stories</i>Inspired Authors</a>
+        <a href="#" data-target="mobile-demo" class="sidenav-trigger"><i class="material-icons">menu</i></a>
+
             <ul id="nav-mobile" class="right hide-on-med-and-down">
             <li><a href="sass.html"><i class="material-icons right">search</i>Buscar</a></li>
             <li><a class="dropdown-trigger" href="#!" data-target="dropdown1">Genero<i

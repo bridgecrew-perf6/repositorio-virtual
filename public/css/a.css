@@ -1,19 +1,16 @@
 /* Fuentes */
-@import url('https://fonts.googleapis.com/css2?family=Roboto+Slab:wght@300;400;500&display=swap');
-
+@import url('https://fonts.googleapis.com/css2?family=Nanum+Pen+Script&family=Pangolin&display=swap');
 div.content{
-    margin-top: 1rem; 
-    margin-bottom: 1rem;
-    margin-right: 0.8rem;
-}
-h5{
-  text-align: center;
+    padding: 1rem;
 }
 div.row{
     margin-bottom: 0;
 }
 div.container{
     width: 90%;
+}
+h2.titulo{
+    font-family: 'Pangolin', cursive;
 }
 div.slime-item01{
     
