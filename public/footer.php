@@ -23,7 +23,7 @@
                 </div>
             </div>
         </div>
-        <div class="footer-copyright | orange darken-4">
+        <div class="footer-copyright |  " style="background-color:#1D1E49">
             <div class="container">
                 © 2022 Copyright We Are OK
                 <a class="grey-text text-lighten-4 right" href="https://github.com/reyHd00/repositorio-virtual.git">OK</a>

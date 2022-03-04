@@ -1,17 +1,17 @@
 <!-- Estilos en CSS -->
-<link rel="stylesheet" href="public/css/style_vtn_hm.css">
+<link rel="stylesheet" href="public/css/a.css">
 
 <!-- Contenido de la pagina principal -->
 
 <div class="row | content">
     <div class="col s8 espacio">
-        <div class="cotainer">
+        
 
-            <section class="black">
+            <section class="ventana">
                 <div class="carousel carousel-slider" data-indicators="true">
                     <div class="carousel-fixed-item">
                         <div class="container">
-                            <h2 class="black-text">Novelas nuevas</h2>
+                            <h2 class="amber lighten-1-text | titulo | center-align ">Estrenos mas recientes</h2>
                         </div>
                     </div>
                     <div class="carousel-item slime-item01   black-text" href="#one!">
@@ -40,11 +40,26 @@
                     </div>
                 </div>
             </section>
-        </div>
+        
         <div class="row">
             <div class="col s12 ">
                 <div class="card-panel ">
-                    
+                    <h1>Autores mas populares</h1>
+                    <div class="divider"></div>
+                        <div class="section">
+                            <h5>Section 1</h5>
+                            <p>Stuff</p>
+                        </div>
+                        <div class="divider"></div>
+                        <div class="section">
+                            <h5>Section 2</h5>
+                            <p>Stuff</p>
+                        </div>
+                        <div class="divider"></div>
+                        <div class="section">
+                            <h5>Section 3</h5>
+                            <p>Stuff</p>
+                        </div>
                 </div>
             </div>
         </div>
@@ -53,7 +68,7 @@
     <div class="col s4 | grey lighten-3 | panel-der">
         <div class="row">
 
-            <h5>Destacados de la semana</h5>
+            <h5 class="center-align">Destacados de la semana</h5>
 
         </div>
         
@@ -147,6 +162,7 @@
         </div>
 
     </div>
+</div>
     <!-- Scripts -->
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.1/jquery.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.98.1/js/materialize.min.js"></script>
