@@ -30,7 +30,7 @@
         <a href="#" data-target="mobile-demo" class="sidenav-trigger"><i class="material-icons">menu</i></a>
 
             <ul id="nav-mobile" class="right hide-on-med-and-down">
-            <li><a href="sass.html"><i class="material-icons right">search</i>Buscar</a></li>
+            <li><a href="?menu=search"><i class="material-icons right">search</i>Buscar</a></li>
             <li><a class="dropdown-trigger" href="#!" data-target="dropdown1">Genero<i
                         class="material-icons right">arrow_drop_down</i></a></li>
                 <li><a href="?menu=horariosm">Mis historias</a></li>
@@ -62,7 +62,7 @@
         <a href="#" data-target="mobile-demo" class="sidenav-trigger"><i class="material-icons">menu</i></a>
 
             <ul id="nav-mobile" class="right hide-on-med-and-down">
-            <li><a href="sass.html"><i class="material-icons right">search</i>Buscar</a></li>
+            <li><a href="?menu=search"><i class="material-icons right">search</i>Buscar</a></li>
             <li><a class="dropdown-trigger" href="#!" data-target="dropdown1">Genero<i
                     class="material-icons right">arrow_drop_down</i></a></li>
                 <li><a href="?menu=agendarc">Mis historias</a></li>
@@ -90,11 +90,11 @@
 </ul>
 <nav>
     <div class="nav-wrapper | nav-color">
-        <a href="#!" class="brand-logo"><i class="material-icons">auto_stories</i>Inspired Authors</a>
+        <a href="index.php" class="brand-logo"><i class="material-icons">auto_stories</i>Inspired Authors</a>
         <a href="#" data-target="mobile-demo" class="sidenav-trigger"><i class="material-icons">menu</i></a>
 
         <ul id="nav-mobile" class="right hide-on-med-and-down">
-        <li><a href="sass.html"><i class="material-icons right">search</i>Buscar</a></li>
+        <li><a href="?menu=search"><i class="material-icons right">search</i>Buscar</a></li>
             <li><a class="dropdown-trigger" href="#!" data-target="dropdown1">Genero<i
                         class="material-icons right">arrow_drop_down</i></a></li>
             <li><a href="?menu=registrarse"><i class="material-icons left">person_add</i>Registrarse</a></li>

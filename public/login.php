@@ -30,7 +30,7 @@
                         <input id="icon_password" name ="contrasenia" type="password" class="validate" required>
                         <label for="icon_password">Contraseña</label>
                     </div>
-                    <button class="login-btn | btn waves-effect | btn-large" type="submit" name="action">Ingresar
+                    <button class="login-btn | btn waves-effect | btn-large | waves-orange" type="submit" name="action">Ingresar
                         <i class="material-icons right">send</i>
                     </button>
                  </div>

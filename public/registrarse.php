@@ -76,7 +76,8 @@
             </div>
 
             <div class="input-field col s12 ">
-                <button class="btn-register | btn waves-effect waves-light" type="submit" name="action">Registrarse
+                <button class="btn-register | btn waves-effect waves-orange" 
+                    type="submit" name="action">Registrarse
                     <i class="material-icons right">send</i>
                 </button>
             </div>

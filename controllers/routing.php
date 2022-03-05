@@ -29,6 +29,9 @@ switch ($var_getMenu) {
         break;
     case "lectorPdf":
         require_once('./public/lectorPdf.php');
+        break;
+    case "search":
+        require_once('./public/buscar.php');
         break;        
     default:
         require_once('./public/home.php');
