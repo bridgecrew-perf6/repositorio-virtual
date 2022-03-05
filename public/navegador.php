@@ -90,7 +90,7 @@
 </ul>
 <nav>
     <div class="nav-wrapper | nav-color">
-        <a href="#!" class="brand-logo"><i class="material-icons">auto_stories</i>Inspired Authors</a>
+        <a href="index.php" class="brand-logo"><i class="material-icons">auto_stories</i>Inspired Authors</a>
         <a href="#" data-target="mobile-demo" class="sidenav-trigger"><i class="material-icons">menu</i></a>
 
         <ul id="nav-mobile" class="right hide-on-med-and-down">
