@@ -1,16 +1,25 @@
 /* Fuentes */
 @import url('https://fonts.googleapis.com/css2?family=Nanum+Pen+Script&family=Pangolin&display=swap');
+
 div.content{
     padding: 1rem;
 }
-div.row{
-    margin-bottom: 0;
+div.top{
+    padding: 0.5rem;
+}
+h5.top-tl{
+    font-family: Verdana, sans-serif;
+    
 }
 div.container{
-    width: 90%;
+    width: 80%;
 }
-h2.titulo{
-    font-family: 'Pangolin', cursive;
+h4.titulo{
+    font-weight: bold;
+    
+}
+span.titulo-nvl{
+    font-weight: bold;
 }
 div.slime-item01{
     
