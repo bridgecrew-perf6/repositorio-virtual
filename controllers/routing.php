@@ -32,7 +32,10 @@ switch ($var_getMenu) {
         break;
     case "search":
         require_once('./public/buscar.php');
-        break;        
+        break;
+    case "generos":
+        require_once('./public/generos.php');
+        break;            
     default:
         require_once('./public/home.php');
 }

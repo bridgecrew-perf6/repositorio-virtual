@@ -10,43 +10,30 @@
 </style>
 <?php
 require_once "./db/conexion/conexion.php";
-    $cadena = $_SESSION['id_paciente'];
-    $nombre = $_SESSION['nombre'];
     $conexion = new Conexion;
 
-    $consulta = "SELECT id_cita,fecha_cita,hora,estatus FROM citas where id_paciente = $cadena";
+    $consulta = "SELECT `categoria` FROM `categorias`";
     $sql = $conexion->obtenerDatos($consulta);
 ?>
 <div class="container">
     <table class="highlight centered responsive-table" width="700" cellpadding="2" cellspacing="0"
         bordercolor="#CCCCCC">
         <tr class="teal darken-4 white-text titulo">
-            <td>Cita</td>
-            <td>Fecha</td>
-            <td>Hora</td>
-            <td>Estatus</td>
-        </tr>
+            <td>Categorías</td>
+            <td></td>
+
         <?php
             for ($i=0; $i < count($sql); $i++) {
                 ?>
         <tr>
+
             <td>
-                <?php echo $i+1?>
+                <?php echo $sql[$i]['categoria']; ?>
             </td>
             <td>
-                <?php echo $sql[$i]['fecha_cita']; ?>
+                <button class="btn waves-effect waves-light" type="submit" name="action">Visitar</button>
             </td>
-            <td>
-                <?php echo $sql[$i]['hora']; ?>
-            </td>
-            <?php
-                    if ($sql[$i]['estatus']==1) { ?>
-            <td>En espera</td>
-            <?php
-                    } else { ?>
-            <td>Finalizada</td>
-            <?php
-                    } ?>
+    
         </tr>
 
         <?php
