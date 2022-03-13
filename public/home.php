@@ -88,7 +88,9 @@
                             <a href="#!" class="collection-item"><span class="new badge">000</span>Visitas</a>
                             <br>
                             <label for="">Calificación</label>
+                            
                         </div>
+                        <img class="responsive-img" width="130px" src="./libros/portadas/1243.jpg">
                     </div> 
                 </div>
                 <div class="card hoverable">
