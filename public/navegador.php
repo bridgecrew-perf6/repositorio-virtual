@@ -13,7 +13,7 @@
         session_start();
     }
     if (isset($_SESSION['loggedUserName'])) {
-        if ($_SESSION['id_rol'] == 1) {
+        if ($_SESSION['id_rol'] == 3) {
             ?>
 <!-- Navegador logeado Author -->
 <div class="navbar-fixed">
@@ -25,14 +25,13 @@
             <ul id="nav-mobile" class="right hide-on-med-and-down">
             <li><a href="?menu=search"><i class="material-icons right">search</i>Buscar</a></li>
             <li><a href="?menu=generos">Género</a></li>
-                <li><a href="?menu=horariosm">Mis historias</a></li>
-                <!-- <li><a href="?menu=receta">Crear receta</a></li> -->
-                <li><a href="">Subir</a></li>
+                <li><a href="?menu=historias">Mis historias</a></li>
+                <li><a href="?menu=subirLibro">Subir</a></li>
                 <li><a href="?menu=logout"><i class="material-icons left">logout</i>Cerrar sesión</a></li>
             </ul>
         </div>
         <ul class="sidenav" id="mobile-demo">
-            <li><a href="?menu=logout"><i class="material-icons left">logout</i>Cerrar sesión Medico</a></li>
+            <li><a href="?menu=logout"><i class="material-icons left">logout</i>Cerrar sesión</a></li>
         </ul> 
     </nav>
 </div>
@@ -50,7 +49,7 @@
             <ul id="nav-mobile" class="right hide-on-med-and-down">
             <li><a href="?menu=search"><i class="material-icons right">search</i>Buscar</a></li>
             <li><a href="?menu=generos">Género</a></li>                  
-                <li><a href="?menu=lista">Mis historias</a></li>
+                <li><a href="?menu=historias">Mis historias</a></li>
                 <li><a href="">Autores</a></li>
                 <li><a href="?menu=logout"><i class="material-icons left">logout</i>Cerrar sesión</a></li>
             </ul>

@@ -5,7 +5,8 @@
 ?>
 <!DOCTYPE html>
 <html lang="es">
-<label for="">categoriaEspecificaad</label>
+    <h2> aqui se mostrará todos los libros con la categoría Especificada</h2>
+
 </html>
 
 

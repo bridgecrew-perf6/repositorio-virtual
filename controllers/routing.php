@@ -38,8 +38,13 @@ switch ($var_getMenu) {
         break;
     case "vistaGeneros":
         require_once('./public/vistaGeneros.php');
-
         break;
+    case "historias":
+        require_once('./public/historias.php');    
+        break;
+    case "subirLibro":
+        require_once('./public/subirLibro.php');    
+        break;        
     default:
         require_once('./public/home.php');
 }
