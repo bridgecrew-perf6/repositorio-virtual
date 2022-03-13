@@ -31,10 +31,12 @@ require_once "./db/conexion/conexion.php";
                 <?php echo $sql[$i]['categoria']; ?>
             </td>
             <td>
-                <form action="vistaCategoria.php" method="post">
-                 <input type="hidden" value = "<?php echo $sql[$i]['categoria']; ?>">   
-                <button class="btn waves-effect waves-light" type="submit" name="action" >Visitar</button>
+
+                <form action="./db/generos.php">
+                <button class="btn waves-effect waves-light" type="submit"  > Visitar</button>
                 </form>
+                
+
                 
             </td>
     

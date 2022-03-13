@@ -34,8 +34,12 @@ switch ($var_getMenu) {
         require_once('./public/buscar.php');
         break;
     case "generos":
-        require_once('./public/generos.php');
-        break;            
+        require_once('./public/generos.php');        
+        break;
+    case "vistaGeneros":
+        require_once('./public/vistaGeneros.php');
+
+        break;
     default:
         require_once('./public/home.php');
 }

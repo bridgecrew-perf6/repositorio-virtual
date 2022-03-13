@@ -65,13 +65,8 @@
 } else {
         ?>
 <!-- navegador sin logear -->
-<!-- Dropdown Structure -->
-<ul id="dropdown1" class="dropdown-content">
-    <li><a href="#!">Romance</a></li>
-    <li><a href="#!">Comedia</a></li>
-    <li><a href="#!">Terror</a></li>
-    <li><a href="#!">Ensayos</a></li>
-</ul>
+
+
 <nav>
     <div class="nav-wrapper | nav-color">
         <a href="index.php" class="brand-logo"><i class="material-icons">auto_stories</i>Inspired Authors</a>
@@ -79,8 +74,7 @@
 
         <ul id="nav-mobile" class="right hide-on-med-and-down">
         <li><a href="?menu=search"><i class="material-icons right">search</i>Buscar</a></li>
-            <li><a class="dropdown-trigger" href="#!" data-target="dropdown1">Genero<i
-                        class="material-icons right">arrow_drop_down</i></a></li>
+            <li><a href="?menu=generos">Géneros </a></li>
             <li><a href="?menu=registrarse"><i class="material-icons left">person_add</i>Registrarse</a></li>
             <li><a href="?menu=login"><i class="material-icons left">login</i>Iniciar sesión </a></li>
 
