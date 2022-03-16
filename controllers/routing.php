@@ -44,7 +44,10 @@ switch ($var_getMenu) {
         break;
     case "subirLibro":
         require_once('./public/subirLibro.php');    
-        break;        
+        break;  
+    case "portada":
+        require_once('./public/agregarPortada.php');    
+        break;      
     default:
         require_once('./public/home.php');
 }
