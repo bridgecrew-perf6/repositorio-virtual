@@ -14,9 +14,10 @@ $contrasenia=$_POST['contrasenia'];
     $consulta="SELECT * FROM `usuarios` WHERE correo='$email' and contrasena='$contrasenia'";
         if ($sql = $conexion->obtenerDatos($consulta)) {
            session_start();
-           
+                          
             $_SESSION['loggedUserName'] = $sql[0]['correo'] ;
             $_SESSION['id_rol'] = $sql[0]['id_rol'];
+
             if ($sql[0]['id_rol']==2) {
                /* $consultaid ="SELECT * FROM usuarios where correo='$email'";
                 $sqlid = $conexion->obtenerDatos($consultaid);
@@ -24,10 +25,7 @@ $contrasenia=$_POST['contrasenia'];
                 $_SESSION['nombre']=$sqlid[0]['nombre'];*/
                 echo '<script>alert("Inicio de sesion exitoso");window.location.href="../index.php?menu=lector"</script>';
             } elseif ($sql[0]['id_rol']==3) {
-               /* $consultaid = "SELECT * FROM usuarios where correo='$email'";
-                $sqlid = $conexion->obtenerDatos($consultaid);
-                $_SESSION['id_user'] = $sqlid[0]['id_user'];
-                $_SESSION['nombre'] = $sqlid[0]['nombre'];*/
+
                 echo '<script>alert("Inicio de sesion exitoso");window.location.href="../index.php?menu=autor"</script>';
             }
         } else {

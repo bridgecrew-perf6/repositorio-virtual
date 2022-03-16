@@ -1,6 +1,6 @@
 <?php
-$cadena = $_SESSION['id_autor'];
-$nombre = $_SESSION['nombre'];
+$rol = $_SESSION['id_rol'];
+$user = $_SESSION['loggedUserName'];
 ?>
 
 <!-- Estilos de CSS -->
