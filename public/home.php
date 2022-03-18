@@ -90,7 +90,7 @@
                             <label for="">Calificación</label>
                             
                         </div>
-                        <img class="responsive-img" width="130px" src="./libros/portadas/1243.jpg">
+                        <img class="responsive-img" width="135px" src="./libros/portadas/20220318153309.jpg">
                     </div> 
                 </div>
                 <div class="card hoverable">

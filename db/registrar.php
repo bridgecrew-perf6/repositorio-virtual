@@ -42,7 +42,7 @@
         $resultado2 = $conexion->ingresarDatos($sql2);     
        
         if($rol == "3" ){
-            $sql3 = "INSERT INTO `autor`(`nombre`,`apellidoP`,`apellidoM`) VALUES ('$nombre','$apellidoPaterno','$apellidoMaterno')";
+            $sql3 = "INSERT INTO `autor`(`nombre`,`apellidoP`,`apellidoM`,`correo`) VALUES ('$nombre','$apellidoPaterno','$apellidoMaterno','$correo')";
             $resultado3 = $conexion->ingresarDatos($sql3);
         }              
             echo '<script>

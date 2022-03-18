@@ -12,7 +12,7 @@
         <div class="row | white | z-depth-3">
             <h2>Agregar portada</h2>
 
-            <input type="file" name="imagen">                  
+            <input type="file" name="imagen" required>                  
             
             <div class="input-field col s12 ">
                 <button class="btn-register | btn waves-effect waves-orange" 

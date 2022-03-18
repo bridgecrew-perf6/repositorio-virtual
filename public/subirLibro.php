@@ -2,6 +2,7 @@
 <link href="public/css/style_registro.css" rel="stylesheet" />
 
 <?php
+$correo = $_SESSION['loggedUserName'];
 require_once "./db/conexion/conexion.php";
     $conexion = new Conexion;
 
@@ -15,7 +16,7 @@ require_once "./db/conexion/conexion.php";
 
         <div class="row | white | z-depth-3">
             <h2>Subir Libro</h2>
-
+            <input type="hidden" name="correoAutor" value="<?php echo $correo; ?>">
 
             <div class="input-field col s12">
 
@@ -25,12 +26,12 @@ require_once "./db/conexion/conexion.php";
 
             <div class="input-field col s12">
                 <label for="icon_date">Fecha de publicacion</label>
-                <input type="text" name="fechaPublicacion" class="datepicker">
+                <input type="text" name="fechaPublicacion" class="datepicker" required>
 
             </div>
 
             <div class="input-field col s12">
-                <select name="genero">
+                <select name="genero" required>
                 <option value="" disabled selected></option>
                 <?php
             $num = 1;    
@@ -48,10 +49,10 @@ require_once "./db/conexion/conexion.php";
             </div>
                     
             <div class="input-field col s12">
-                <textarea id="textarea1" class="materialize-textarea" name="descripcion"></textarea>
+                <textarea id="textarea1" class="materialize-textarea" name="descripcion" required></textarea>
                 <label for="textarea1">Descripción</label>
             </div>
-            <input type="file" name="documento">                  
+            <input type="file" name="documento" required>                  
             
             <div class="input-field col s12 ">
                 <button class="btn-register | btn waves-effect waves-orange" 
@@ -66,13 +67,13 @@ require_once "./db/conexion/conexion.php";
     </form>
 </div>
 <!-- Scripts de JS -->
-<script src="public/js/validacion_registro.js"></script>
+
 <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
 <script src="https://cdn.jsdelivr.net/npm/sweetalert2@10"></script>
 <script>
     var f = new Date();
     var año = f.getFullYear();
-    var mes = f.getMonth() + 1;
+    var mes = f.getMonth()+1;
     var dia = f.getDay();
     
     var f1 = new Date(dia+"/"+mes+"/"+año);
