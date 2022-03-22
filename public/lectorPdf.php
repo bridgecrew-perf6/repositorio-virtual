@@ -1,4 +1,12 @@
+<?php
+require_once "./db/conexion/conexion.php";
+$conexion = new Conexion;
 
+$consulta = "SELECT * FROM `libro` WHERE codigoArchivo='$_codigo'; ";
+$sql = $conexion->obtenerDatos($consulta);
+
+
+?>
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -18,7 +26,7 @@
     text-align : center !important;
   }
 </style>  
-<h1>TITULO DEL LIBRO</h1>
+<h1><?php echo $sql[0]['titulo']; ?></h1>
 
 <div>
   <button id="prev">Anterior</button>
