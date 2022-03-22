@@ -28,6 +28,7 @@ switch ($var_getMenu) {
         require_once('./public/lector.php');
         break;
     case "lectorPdf":
+        $_codigo = trim(filter_input(INPUT_GET,'codigo'));
         require_once('./public/lectorPdf.php');
         break;
     case "search":
@@ -37,6 +38,7 @@ switch ($var_getMenu) {
         require_once('./public/generos.php');        
         break;
     case "vistaGeneros":
+        $_categoria = trim(filter_input(INPUT_GET,'categoriaA'));
         require_once('./public/vistaGeneros.php');
         break;
     case "historias":
