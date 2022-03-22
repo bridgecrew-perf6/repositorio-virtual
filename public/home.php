@@ -1,8 +1,13 @@
 <?php
     require_once "./db/conexion/conexion.php";
     $conexion = new Conexion;
-    $consulta = "SELECT `titulo`,`codigoArchivo`FROM `libro`;";
+    $consulta = "SELECT * FROM `libro`";
     $sql = $conexion->obtenerDatos($consulta);
+
+    $consulta2 = "SELECT * FROM `autor`";
+    $sql2 = $conexion->obtenerDatos($consulta2);
+
+
 ?>
 <!-- Estilos en CSS -->
 <link rel="stylesheet" href="public/css/b.css">
@@ -50,22 +55,20 @@
             <div class="row">
                 <div class="col s12 ">
                     
-                        <h3>Autores mas populares</h3>
+                    <h3>Autores más populares</h3>
+                    <?php
+                    for ($i=0; $i < 5; $i++) {
+                    ?>
+
                         <div class="divider"></div>
                             <div class="section">
-                                <h5>Autor 1</h5>
+                                <h5><?php echo $sql2[$i]['nombre']?>  <?php echo $sql2[$i]['apellidoP']?></h5>
                                 <p>Stuff</p>
                             </div>
-                            <div class="divider"></div>
-                            <div class="section">
-                                <h5>Autor 2</h5>
-                                <p>Stuff</p>
-                            </div>
-                            <div class="divider"></div>
-                            <div class="section">
-                                <h5>Autor 3</h5>
-                                <p>Stuff</p>
-                            </div>
+                    <?php
+                    }
+                    ?>        
+                           
                     
                 </div>
             </div>
@@ -73,74 +76,39 @@
         </div>
         <!-- Lado Derecho -  Top´s -->
         <div class="col s12 m4 ">
+
             <div class="card card-panel" >
                 <div class="row">
                     <h5 class="center-align | top-tl">Lo mas destacado</h5>
                 </div>
-                <div class="card hoverable">
-                    <div class="row | top" >
-                        <div class="col s3" >
-                            <h4 class="center-align | titulo">#01</h4>
-                        </div>
-                        <div class="col s9" >
-                            <span class="titulo-nvl">Titulo de la lectura</span>
-                            <br>
-                            <a href="#!" class="collection-item"><span class="new badge">000</span>Visitas</a>
-                            <br>
-                            <label for="">Calificación</label>
-                            
-                        </div>
-                        <img class="responsive-img" width="135px" src="./libros/portadas/20220318153309.jpg">
-                    </div> 
-                </div>
-                <div class="card hoverable">
-                    <div class="row | top">
-                        <div class="col s3">
-                            <h4 class="center-align | titulo">#02</h4>
-                        </div>
-                        <div class="col s9">
-                            <span class="titulo-nvl">Titulo de la lectura</span >
-                            <p>Visitas 000K</p>
-                            <label for="">Calificación</label>
-                        </div>
+                <?php
+                for ($i=0; $i < 5; $i++) {
+                ?>
+                    <div class="card hoverable">
+                        <div class="row | top" >
+                            <div class="col s3" >
+                                <h4 class="center-align | titulo">#0<?php echo $i+1 ?></h4>
+                            </div>
+                            <div class="col s9" >
+                                <span class="titulo-nvl"><?php echo $sql[$i]['titulo']?></span>
+                                <br>
+                                <a href="?menu=lectorPdf&codigo=<?php echo $sql[$i]['codigoArchivo']?>" class="collection-item">LEER</a>
+                                <br>
+                                <label for="">Calificación</label>
+                                
+                            </div>
+                            <img class="responsive-img" width="135px" src="./libros/portadas/<?php echo $sql[$i]['codigoArchivo']?>.jpg">
+                        </div> 
                     </div>
-                </div>
-                <div class="card hoverable">
-                    <div class="row | top">
-                        <div class="col s3">
-                            <h4 class="center-align | titulo">#03</h4>
-                        </div>
-                        <div class="col s9">
-                            <span class="titulo-nvl">Titulo de la lectura</span>
-                            <p>Visitas 000K</p>
-                            <label for="">Calificación</label>
-                        </div>
-                    </div>
-                </div>
-                <div class="card hoverable">
-                    <div class="row | top">
-                        <div class="col s3">
-                            <h4 class="center-align | titulo">#04</h4>
-                        </div>
-                        <div class="col s9">
-                            <span class="titulo-nvl">Titulo de la lectura</span>
-                            <p>Visitas 000K</p>
-                            <label for="">Calificación</label>
-                        </div>
-                    </div>
-                </div>
-                <div class="card hoverable">
-                    <div class="row | top">
-                        <div class="col s3">
-                            <h4 class="center-align | titulo">#05</h4>
-                        </div>
-                        <div class="col s9">
-                            <span class="titulo-nvl">Titulo de la lectura</span>
-                            <p>Visitas 000K</p>
-                            <label for="">Calificación</label>
-                        </div>
-                    </div>
-                </div>
+
+                <?php
+                   }
+                ?>
+
+                
+               
+               
+               
             </div>
         </div>
     </div>

@@ -32,12 +32,10 @@ require_once "./db/conexion/conexion.php";
             </td>
             <td>
 
-                <form action="./db/generos.php">
-                <button class="btn waves-effect waves-light" type="submit"  > Visitar</button>
-                </form>
-                
-
-                
+            <button class="waves-effect waves-light btn-small teal darken-4" type="submit" name="action" >
+                            <a class="white-text" href="?menu=vistaGeneros&categoriaA=<?php echo $sql[$i]['categoria']; ?> " > Visitar </a>
+                        </button>
+                               
             </td>
     
         </tr>
