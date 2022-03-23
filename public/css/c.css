@@ -46,3 +46,17 @@ div.slime-item04{
     background-size: cover;
     
 }
+scroll-container {
+    display: block;
+    width: 260px;
+    height: 1000px;
+    overflow-y: scroll;
+    scroll-behavior: smooth;
+  }
+  scroll-page {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    
+   
+  }

@@ -10,7 +10,7 @@
 
 ?>
 <!-- Estilos en CSS -->
-<link rel="stylesheet" href="public/css/b.css">
+<link rel="stylesheet" href="public/css/c.css">
 
 <!-- Contenido de la pagina principal -->
 
@@ -56,22 +56,26 @@
                 <div class="col s12 ">
                     
                     <h3>Autores más populares</h3>
+                   
                     <?php
                     for ($i=0; $i < 5; $i++) {
                     ?>
 
                         <div class="divider"></div>
                             <div class="section">
+                               
                                 <h5><?php echo $sql2[$i]['nombre']?>  <?php echo $sql2[$i]['apellidoP']?></h5>
                                 <p>Stuff</p>
+                 
                             </div>
                     <?php
                     }
                     ?>        
                            
-                    
+                   
                 </div>
             </div>
+           
        
         </div>
         <!-- Lado Derecho -  Top´s -->
@@ -81,9 +85,11 @@
                 <div class="row">
                     <h5 class="center-align | top-tl">Lo mas destacado</h5>
                 </div>
+                <scroll-container>
                 <?php
-                for ($i=0; $i < 5; $i++) {
+                for ($i=0; $i < 10; $i++) {
                 ?>
+                <scroll-page >
                     <div class="card hoverable">
                         <div class="row | top" >
                             <div class="col s3" >
@@ -100,12 +106,12 @@
                             <img class="responsive-img" width="135px" src="./libros/portadas/<?php echo $sql[$i]['codigoArchivo']?>.jpg">
                         </div> 
                     </div>
-
+                    </scroll-page>
                 <?php
                    }
                 ?>
 
-                
+</scroll-container>
                
                
                
