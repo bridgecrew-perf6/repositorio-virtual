@@ -22,7 +22,7 @@
                 <div class="carousel carousel-slider" data-indicators="true">
                     <div class="carousel-fixed-item">
                         <div class="container">
-                            <h2 class="white-text indigo darken-4 | titulo | center-align ">Estrenos mas recientes</h2>
+                            <!-- Se elimino la etiqueta estatica del titulo -->
                         </div>
                     </div>
                     <div class="carousel-item slime-item01   black-text" href="#one!">
