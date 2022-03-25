@@ -48,15 +48,13 @@ div.slime-item04{
 }
 scroll-container {
     display: block;
-    width: 260px;
+    width: 286px;
     height: 1000px;
     overflow-y: scroll;
     scroll-behavior: smooth;
-  }
-  scroll-page {
+}
+scroll-page {
     display: flex;
     align-items: center;
     justify-content: center;
-    
-   
-  }
+}

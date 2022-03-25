@@ -10,7 +10,7 @@
 
 ?>
 <!-- Estilos en CSS -->
-<link rel="stylesheet" href="public/css/c.css">
+<link rel="stylesheet" href="public/css/d.css">
 
 <!-- Contenido de la pagina principal -->
 
@@ -22,7 +22,7 @@
                 <div class="carousel carousel-slider" data-indicators="true">
                     <div class="carousel-fixed-item">
                         <div class="container">
-                            <h2 class="white-text indigo darken-4 | titulo | center-align ">Estrenos mas recientes</h2>
+                            <!-- Se elimino la etiqueta estatica del titulo -->
                         </div>
                     </div>
                     <div class="carousel-item slime-item01   black-text" href="#one!">
@@ -106,9 +106,10 @@
                             <img class="responsive-img" width="135px" src="./libros/portadas/<?php echo $sql[$i]['codigoArchivo']?>.jpg">
                         </div> 
                     </div>
-                    </scroll-page>
+                </scroll-page>
                 <?php
-                   }
+                
+            }
                 ?>
 
 </scroll-container>
