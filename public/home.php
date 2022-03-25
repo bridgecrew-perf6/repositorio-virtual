@@ -10,7 +10,7 @@
 
 ?>
 <!-- Estilos en CSS -->
-<link rel="stylesheet" href="public/css/c.css">
+<link rel="stylesheet" href="public/css/d.css">
 
 <!-- Contenido de la pagina principal -->
 
@@ -106,9 +106,10 @@
                             <img class="responsive-img" width="135px" src="./libros/portadas/<?php echo $sql[$i]['codigoArchivo']?>.jpg">
                         </div> 
                     </div>
-                    </scroll-page>
+                </scroll-page>
                 <?php
-                   }
+                
+            }
                 ?>
 
 </scroll-container>
