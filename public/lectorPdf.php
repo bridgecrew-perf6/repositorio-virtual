@@ -10,22 +10,29 @@ $sql = $conexion->obtenerDatos($consulta);
 <!DOCTYPE html>
 <html lang="en">
 
-<head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
     <script src="//mozilla.github.io/pdf.js/build/pdf.js"></script>
     <title>Reader</title>
+    <!-- Estilos CSS -->
     <style>
         canvas.the-canvas{
             border: 1px solid black;
             direction: ltr;
         }
-  div.canvas{
-    text-align : center !important;
-  }
+        div.canvas{
+          text-align : center !important;
+        }
+        div.controles{
+          padding: 1rem;
+        }
+        button.btn{
+          background-color: #e37222;
+        }
+        button.btn:hover{
+          background-color: #eeaa7b;
+        }
     </style>
-</head>
+
 
 <body>
     <div class="canvas">
@@ -35,11 +42,11 @@ $sql = $conexion->obtenerDatos($consulta);
         <?php echo $sql[0]['titulo']; ?>
     </h1>
 
-    <div>
-        <button id="prev">Anterior</button>
-        <button id="next">Siguiente</button>
-        <button id="zoomin">Acercar</button>
-        <button id="zoomout">Alejar</button>
+    <div class="controles">
+        <button id="prev" class="btn ">Anterior</button>
+        <button id="next" class="btn ">Siguiente</button>
+        <button id="zoomin" class="btn ">Acercar</button>
+        <button id="zoomout" class="btn ">Alejar</button>
         &nbsp; &nbsp;
         <span>Página: <span id="page_num"></span> / <span id="page_count"></span></span>
     </div>
