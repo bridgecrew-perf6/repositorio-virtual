@@ -20,25 +20,14 @@ $contrasenia=$_POST['contrasenia'];
 
             if ($sql[0]['id_rol']==2) {
 
-                echo '<script>alert("Inicio de sesion exitoso");window.location.href="../index.php?menu=lector"</script>';
+                echo '<script>window.location.href="../index.php?menu=lector"</script>';
             } elseif ($sql[0]['id_rol']==3) {
 
-                echo '<script>alert("Inicio de sesion exitoso");window.location.href="../index.php?menu=autor"</script>';
+                echo '<script>window.location.href="../index.php?menu=autor"</script>';
             }
         } else {
-            echo '<script>
-            Swal.fire({
-            icon: "error",
-            title: "Oops...",
-            text: "¡Error, correo y contraseña incorrecta!",
-            showConfirmButton: true,
-            confirmButtonText: "Cerrar"
-            }).then(function(result){
-                if(result.value){                   
-                window.location = "../index.php?menu=login";
-                }
-            });
-            </script>';
+            echo '<script>alert("Usuario o contraseña incorrectos");window.location.href="../index.php?menu=login"</script>';
+
         }
 ?>
 <!-- JS -->
