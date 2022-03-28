@@ -30,7 +30,7 @@
                         <p><?php echo $sql2[$i]['descripcion']; ?></p>
                         </div>
                         <div class="card-action">
-                        <a href="#">This is a link</a>
+                        <a href="?menu=lectorPdf&codigo=<?php echo $sql2[$i]['codigoArchivo']?>">LEER LIBRO</a>
                         </div>
                     </div>
                     </div>

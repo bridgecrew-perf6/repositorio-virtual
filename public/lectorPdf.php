@@ -41,12 +41,13 @@ $sql = $conexion->obtenerDatos($consulta);
     <h1>
         <?php echo $sql[0]['titulo']; ?>
     </h1>
-
+    
+    
     <div class="controles">
-        <button id="prev" class="btn ">Anterior</button>
-        <button id="next" class="btn ">Siguiente</button>
-        <button id="zoomin" class="btn ">Acercar</button>
-        <button id="zoomout" class="btn ">Alejar</button>
+        <button id="prev" class="btn">Anterior</button>
+        <button id="next" class="btn">Siguiente</button>
+        <button id="zoomin" class="btn">Acercar</button>
+        <button id="zoomout" class="btn">Alejar</button>
         &nbsp; &nbsp;
         <span>Página: <span id="page_num"></span> / <span id="page_count"></span></span>
     </div>
