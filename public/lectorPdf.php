@@ -1,11 +1,26 @@
 <?php
+
 require_once "./db/conexion/conexion.php";
 $conexion = new Conexion;
 
-$consulta = "SELECT * FROM `libro` WHERE codigoArchivo='$_codigo'; ";
+$consulta = "SELECT * FROM `libro` WHERE codigoArchivo='$_codigo';";
 $sql = $conexion->obtenerDatos($consulta);
+$id_libro = $sql[0]['id_libro'];
 
+$pagina=1;
 
+$estado_session = session_status();
+if($estado_session == PHP_SESSION_NONE)
+{
+    session_start();
+}
+
+if (isset($_SESSION['loggedUserName'])) {
+    $correo = $_SESSION['loggedUserName'];
+    $consultaId = "SELECT * FROM `usuarios` WHERE correo='$correo';";
+    $sqlId = $conexion->obtenerDatos($consultaId);
+    $id_user = $sqlId[0]['id_user'];
+    $comprobarEnLista = "SELECT * FROM `listalibro` WHERE id_libro='$id_libro' AND id_user= '$id_user';";
 ?>
 <!DOCTYPE html>
 <html lang="en">
@@ -42,6 +57,95 @@ $sql = $conexion->obtenerDatos($consulta);
         <?php echo $sql[0]['titulo']; ?>
     </h1>
     
+    <!-- Si esta registrado vera el boton de agregar a lista de lecturas -->
+    <div class="controles">
+        <button id="prev" class="btn">Anterior</button>
+        <button id="next" class="btn">Siguiente</button>
+        <button id="zoomin" class="btn">Acercar</button>
+        <button id="zoomout" class="btn">Alejar</button>
+        &nbsp; &nbsp;
+        <span>Página: <span id="page_num"></span> / <span id="page_count"></span></span>
+
+            <!-- Si el libro ya está en la lista de lecturas vera el boton de guardar estado de lectura -->
+            
+        <?php
+        if($cos = $conexion->obtenerDatos($comprobarEnLista)){
+            $pagina = $cos[0]['pagina'];
+            ?>
+            <div>
+        <form action="./db/guardarPagina.php" method = "POST">
+            <input type="hidden" name ="idLibro" value="<?php echo $sql[0]['id_libro']; ?>">
+            <input type="hidden" name ="correo" value="<?php echo $correo; ?>">
+            <input id="pag" type="hidden" name ="pagina" value="1">
+
+            <button class="btn waves-effect waves-light blue lighten-1" type="submit" name="action">Guardar estado lectura
+            
+            </button>
+        </form>
+        </div>
+
+            <?php
+        }else{
+        ?>    
+        <!-- Si el libro NO está en la lista de lecturas vera el boton de Agregar a Lista -->
+            <div>
+        <form action="./db/listaLibros.php" method = "POST">
+            <input type="hidden" name ="idLibro" value="<?php echo $sql[0]['id_libro']; ?>">
+            <input type="hidden" name ="correo" value="<?php echo $correo; ?>">
+            <button class="btn waves-effect waves-light blue lighten-1" type="submit" name="action">Agregar a mi lista
+            
+            </button>
+        </form>
+        </div>
+
+        <?php    
+        }
+        ?>
+<!-- ---------------------------------------------------------------------------------------                -->
+        
+
+    </div>
+
+    <canvas id="the-canvas"></canvas>
+
+    <?php
+} else {
+    ?>
+        <!DOCTYPE html>
+<html lang="en">
+
+
+    <script src="//mozilla.github.io/pdf.js/build/pdf.js"></script>
+    <title>Reader</title>
+    <!-- Estilos CSS -->
+    <style>
+        canvas.the-canvas{
+            border: 1px solid black;
+            direction: ltr;
+        }
+        div.canvas{
+          text-align : center !important;
+        }
+        div.controles{
+          padding: 1rem;
+        }
+        button.btn{
+          background-color: #e37222;
+        }
+        button.btn:hover{
+          background-color: #eeaa7b;
+        }
+    </style>
+
+
+<body>
+    <div class="canvas">
+
+    
+    <h1>
+        <?php echo $sql[0]['titulo']; ?>
+    </h1>
+    <!-- Si NO esta registrado No vera el boton de agregar a lista de lecturas -->    
     
     <div class="controles">
         <button id="prev" class="btn">Anterior</button>
@@ -50,9 +154,18 @@ $sql = $conexion->obtenerDatos($consulta);
         <button id="zoomout" class="btn">Alejar</button>
         &nbsp; &nbsp;
         <span>Página: <span id="page_num"></span> / <span id="page_count"></span></span>
+
     </div>
 
     <canvas id="the-canvas"></canvas>
+
+
+    <?php
+}
+?>    
+
+
+
     <script>
         // If absolute URL from the remote server is provided, configure the CORS
         // header on that server.
@@ -66,7 +179,7 @@ $sql = $conexion->obtenerDatos($consulta);
         pdfjsLib.GlobalWorkerOptions.workerSrc = '//mozilla.github.io/pdf.js/build/pdf.worker.js';
 
         var pdfDoc = null,
-            pageNum = 1,
+            pageNum = <?php echo $pagina ?>,
             pageRendering = false,
             pageNumPending = null,
             scale = 1.5,
@@ -105,7 +218,9 @@ $sql = $conexion->obtenerDatos($consulta);
             });
 
             // Update page counters
+            
             document.getElementById('page_num').textContent = num;
+            document.getElementById('pag').value = num;
         }
 
         /**
