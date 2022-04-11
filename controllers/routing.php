@@ -49,7 +49,11 @@ switch ($var_getMenu) {
         break;  
     case "portada":
         require_once('./public/agregarPortada.php');    
-        break;      
+        break; 
+    case "quitarDeLista":
+        $_idLibro = trim(filter_input(INPUT_GET,'id'));
+        require_once('./db/eliminarDeLista.php');    
+        break;         
     default:
         require_once('./public/home.php');
 }
