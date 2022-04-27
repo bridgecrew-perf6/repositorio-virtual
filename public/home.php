@@ -55,7 +55,7 @@
             <div class="row">
                 <div class="col s12 ">
                     
-                    <h3>Autores más populares</h3>
+                    <h3 style="font-family: verdana">Autores más populares</h3>
                    
                     <?php
                     for ($i=0; $i < 5; $i++) {

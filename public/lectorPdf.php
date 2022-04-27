@@ -132,8 +132,14 @@ if (isset($_SESSION['loggedUserName'])) {
         button.btn{
           background-color: #e37222;
         }
+        button.cambio{
+            background-color: #727D71;
+        }
         button.btn:hover{
-          background-color: #eeaa7b;
+          background-color: #E68037;
+        }
+        button.cambio:hover{
+            background-color: #808B7E;
         }
     </style>
 
@@ -148,8 +154,8 @@ if (isset($_SESSION['loggedUserName'])) {
     <!-- Si NO esta registrado No vera el boton de agregar a lista de lecturas -->    
     
     <div class="controles">
-        <button id="prev" class="btn">Anterior</button>
-        <button id="next" class="btn">Siguiente</button>
+        <button id="prev" class="btn | cambio">Anterior</button>
+        <button id="next" class="btn | cambio">Siguiente</button>
         <button id="zoomin" class="btn">Acercar</button>
         <button id="zoomout" class="btn">Alejar</button>
         &nbsp; &nbsp;
