@@ -1,11 +1,7 @@
 <?php
 
-/*
- *
- */
 
 $var_getMenu = isset($_GET['menu']) ? $_GET['menu'] : 'inicio';
-// $var_getMenu = $_GET['menu'];
 
 switch ($var_getMenu) {
     case "home":
@@ -33,6 +29,9 @@ switch ($var_getMenu) {
         break;
     case "search":
         require_once('./public/buscar.php');
+        break;
+    case "resBusqueda":           
+        require_once('./public/ResultadoBusqueda.php');
         break;
     case "generos":
         require_once('./public/generos.php');        
